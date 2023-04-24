@@ -1,0 +1,7 @@
+<h1>Dos Parametros</h1>
+
+<p>ID: {{id}}</p>
+<p>Nombre: {{nombre}}</p>
+
+<button [routerLink]="['/pasoDosParametrosRecibe']" [queryParams]="{action:id,nombre: nombre}">
+    Pasar Parametros</button>

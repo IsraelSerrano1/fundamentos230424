@@ -1,0 +1,27 @@
+<h1>Directivas</h1>
+
+<p *ngIf="registrado; else noNumero">{{texto}}</p>
+<button (click)="testngIf()">Test ngIf</button>
+
+<ng-template #noNumero>
+    <p>No has pulsado el botón</p>
+</ng-template>
+
+<br>
+<p>Listado de libros con ngFor:</p>
+<ul>
+    <li *ngFor="let libro of libros">{{libro}}</li>
+</ul>
+
+<p>Switch: </p>
+
+<input type="text" [(ngModel)]="numero">
+
+<ul [ngSwitch]="numero">
+    <li *ngSwitchCase="'1'">Uno</li>
+    <li *ngSwitchCase="'2'">Dos</li>
+    <li *ngSwitchCase="'3'">Tres</li>    
+    <li *ngSwitchDefault>Elige un numero del 1 al 3 </li>
+  </ul>
+
+  
